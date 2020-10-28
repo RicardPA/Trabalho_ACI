@@ -1,5 +1,5 @@
 --------------------------------------------------------%
--- ULA_HEAD                                             %
+-- ULA_BODY                                             %
 -- Entradas: a_h, b_h, Less_h, Binvert_h e Carryln_h    %
 -- Saidas: Operation_h, CarryOut_h e Result_h           %
 -- Dependencias: somador_comp, mult4x1 e mult2x1        %
