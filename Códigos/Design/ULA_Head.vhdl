@@ -1,5 +1,5 @@
 --------------------------------------------------------%
--- ULA_BODY                                             %
+-- ULA_HEAD                                             %
 -- Entradas: a_h, b_h, Less_h, Binvert_h e Carryln_h    %
 -- Saidas: Operation_h, CarryOut_h e Result_h           %
 -- Dependencias: somador_comp, mult4x1 e mult2x1        %
@@ -38,7 +38,7 @@ signal AND_h : std_logic;
 begin
    --Pegar valor B
    mux2x1_h : mult2x1
-   port map( e_1 => a_h,
+   port map( e_1 => b_h,
              e_2 => b_h,
              sel => Binvert_h,
              s   => saida_mult2_h);
