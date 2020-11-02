@@ -14,20 +14,20 @@ architecture arch_ULA_Body_Tb of ULA_Body_Tb is
 -----------------------------|Componentes|-------------------
 
 component ULA_Body is
-   port (a_b, b_b, Less_b: in std_logic_vector (29 downto 0);
+   port (a_b, b_b, Less_b: in std_logic;
    		 Carryln_b, Binvert_b: in std_logic;
          Operation_b: in std_logic_vector (1 downto 0); 
-         CarryOut_b, Result_b: out std_logic_vector (29 downto 0));
+         CarryOut_b, Result_b: out std_logic);
 end component;
 -------------------------------------------------------------
-signal a_tb: std_logic_vector (29 downto 0);
-signal b_tb: std_logic_vector (29 downto 0);
-signal Less_tb: std_logic_vector (29 downto 0);
+signal a_tb: std_logic;
+signal b_tb: std_logic;
+signal Less_tb: std_logic;
 signal Binvert_tb: std_logic;
 signal Carryln_tb: std_logic;
 signal Operations_tb: std_logic_vector(1 downto 0);
-signal CarryOut_tb: std_logic_vector (29 downto 0);
-signal Result_tb: std_logic_vector (29 downto 0);
+signal CarryOut_tb: std_logic;
+signal Result_tb: std_logic;
 -------------------------------------------------------------
 begin
 uut: ULA_Body
@@ -44,12 +44,12 @@ uut: ULA_Body
     
 Tb: process
 	begin
-	 Carryln_tb <= '1';
+	 Carryln_tb <= '0';
      Binvert_tb <= '1';
      Operations_tb <= "10";
-     a_tb <= "111111111111111111111111111111";
-     b_tb <= "111111111111111111111111111111";
-     Less_tb <= "111111111111111111111111111111";
+     a_tb <= '1';
+     b_tb <= '1';
+     Less_tb <= '0';
     wait for 100 ns;    
     wait;
 end process;
